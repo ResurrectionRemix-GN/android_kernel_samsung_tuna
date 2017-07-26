@@ -5983,7 +5983,7 @@ int alloc_contig_range(unsigned long start, unsigned long end,
 {
 	struct zone *zone = page_zone(pfn_to_page(start));
 	unsigned long outer_start = start, outer_end = end;
-	int ret = -EBUSY, order, tries, nMaxTries = 25;
+	int ret = -EBUSY, order, tries, nMaxTries = 75;
 
 	/*
 	 * What we do here is we mark all pageblocks in range as
